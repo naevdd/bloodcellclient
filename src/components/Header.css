@@ -1,0 +1,41 @@
+.header {
+    background-color: #7e3e31;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+  }
+  
+  @font-face {
+    font-family: myFirstFont;
+    src: url(../regards.otf);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .nav-button {
+    background-color: #ea937b;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: myFirstFont, sans-serif;
+    color: black;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-button.active {
+    background-color: #f56143;
+    color: white;
+  }
+  
+  .nav-button:hover {
+    background-color: #fefefe;
+    transform: scale(1.1);
+  }
+  
