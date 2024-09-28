@@ -3,12 +3,17 @@
   src: url(./regards.otf);
 }
 
+@font-face {
+  font-family: urbanist;
+  src: url(./Satoshi-Bold.otf);
+}
+
 .app {
   display: flex;
   flex-direction: column;
   padding: 50px 50px 35% 50px;
-  background-color: #7f3a30;
-  font-family: monospace;
+  background-color: #d88b79;
+  font-family: urbanist;
   font-size: 20px;
 }
 

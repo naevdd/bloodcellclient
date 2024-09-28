@@ -1,13 +1,13 @@
 .header {
-    background-color: #7e3e31;
+    background-color: #d9b6a3;
     padding: 10px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 100px;
   }
   
   @font-face {
-    font-family: myFirstFont;
-    src: url(../regards.otf);
+    font-family: satoshi;
+    src: url(../Satoshi-Bold.otf);
   }
 
   .nav {
@@ -22,7 +22,7 @@
     padding: 15px 30px;
     font-size: 1.2rem;
     font-weight: bold;
-    font-family: myFirstFont, sans-serif;
+    font-family: satoshi;
     color: black;
     border-radius: 30px;
     cursor: pointer;

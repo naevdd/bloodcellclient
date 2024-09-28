@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Form.css';
 
 const LoginForm = ({ onLoginSuccess }) => {
   const [username, setUsername] = useState('');
@@ -18,31 +19,32 @@ const LoginForm = ({ onLoginSuccess }) => {
   };
 
   return (
-    <div>
-      <h1>Welcome to the Blood Donation App</h1>
-      <h2>Admin Login</h2>
+    <div className='form-container'>
+      <h2 className='heading'>Admin Login</h2>
+      <div>
       <form onSubmit={handleLogin}>
-        <div>
-          <label>Username:</label>
+        <fieldset className='form-field'>
+          <legend>Username</legend>
           <input 
             type="text" 
             value={username} 
             onChange={(e) => setUsername(e.target.value)} 
             required 
           />
-        </div>
-        <div>
-          <label>Password:</label>
+        </fieldset>
+        <fieldset className='form-field'>
+          <legend>Password</legend>
           <input 
             type="password" 
             value={password} 
             onChange={(e) => setPassword(e.target.value)} 
             required 
           />
-        </div>
+        </fieldset>
         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
         <button type="submit">Login</button>
       </form>
+      </div>
     </div>
   );
 };

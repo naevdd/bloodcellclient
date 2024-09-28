@@ -1,19 +1,31 @@
+@font-face {
+  font-family:urbanist;
+  src: url(../Satoshi-Bold.otf);
+}
+
 .form-container {
   background-color: #ca8181;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 50px;
+  border-radius:30px;
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  font-family: monospace;
+}
+
+fieldset{
+  border:none;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  font-family: monospace;
+  font-family: urbanist;
   font-size: 15px;
+}
+
+legend{
+  text-align: left;
 }
 
 .form-field label {
@@ -21,22 +33,42 @@
   color: black;
 }
 
-.form-field input,
-.form-field select {
+.form-field input {
+  position:relative;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  width:95%
+}
+
+.form-field select{
+  position:relative;
+  padding:10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size:1rem;
+  width:100%;
+}
+
+button{
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #f76646;
+  border: none;
+  border-radius: 5px;
+  color: white
 }
 
 .submit-button {
-  background-color: #FFFFF0;
-  padding: 10px;
-  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #f76646;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  color: white;
 }
 
 .submit-button:hover {

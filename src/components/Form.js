@@ -33,8 +33,8 @@ const Form = ({ formType }) => {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit} className="form">
-        <div className="form-field">
-          <label>Name : </label>
+        <fieldset className="form-field">
+          <legend>Name</legend>
           <input
             type="text"
             name="name"
@@ -42,10 +42,10 @@ const Form = ({ formType }) => {
             onChange={handleChange}
             required
           />
-        </div>
+        </fieldset>
 
-        <div className="form-field">
-          <label>Blood type : </label>
+        <fieldset className="form-field">
+          <legend>Blood type</legend>
           <select
             name="bloodType"
             value={formData.bloodType}
@@ -62,11 +62,11 @@ const Form = ({ formType }) => {
             <option value="O+">O+</option>
             <option value="O-">O-</option>
           </select>
-        </div>
+        </fieldset>
 
         {formType === 'patient' && (
-          <div className="form-field">
-            <label>Number of units : </label>
+          <fieldset className="form-field">
+            <legend>Number of units</legend>
             <input
               type="number"
               name="units"
@@ -74,11 +74,11 @@ const Form = ({ formType }) => {
               onChange={handleChange}
               required
             />
-          </div>
+          </fieldset>
         )}
 
-        <div className="form-field">
-          <label>Phone number : </label>
+        <fieldset className="form-field">
+          <legend>Phone number</legend>
           <input
             type="tel"
             name="phone"
@@ -86,7 +86,7 @@ const Form = ({ formType }) => {
             onChange={handleChange}
             required
           />
-        </div>
+        </fieldset>
 
         <button type="submit" className="submit-button">SUBMIT</button>
       </form>
