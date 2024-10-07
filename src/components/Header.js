@@ -5,6 +5,8 @@ const Header = ({ activeSection, onSectionChange }) => {
   return (
     <header className="header">
       <nav className="nav">
+      <img src='../sfi new bold logo (1).png' width="50" height='50' className="logo" alt="logo"></img>
+      <div className="divnav">
         <button
           className={`nav-button ${activeSection === 'intro' ? 'active' : ''}`}
           onClick={() => onSectionChange('intro')}
@@ -23,6 +25,7 @@ const Header = ({ activeSection, onSectionChange }) => {
         >
           PATIENT
         </button>
+        </div>
       </nav>
     </header>
   );

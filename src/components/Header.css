@@ -10,10 +10,21 @@
     src: url(../Satoshi-Bold.otf);
   }
 
+  .logo{
+    position: absolute;
+    left:5em;
+  }
+
   .nav {
     display: flex;
     justify-content: center;
     gap: 20px;
+  }
+
+  .divnav{
+    display:flex;
+    justify-content: center;
+    gap:20px;
   }
   
   .nav-button {
