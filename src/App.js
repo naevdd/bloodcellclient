@@ -42,7 +42,7 @@ function App() {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:5000/api/admin/logout');
+      await axios.post('https://bloodcell-server.onrender.com/api/admin/logout');
       setIsAdminLoggedIn(false);
       setActiveSection('intro');
     } catch (err) {
@@ -52,11 +52,11 @@ function App() {
 
   useEffect(() => {
     if (isAdminLoggedIn) {
-      axios.get('http://localhost:5000/api/donor')
+      axios.get('https://bloodcell-server.onrender.com/api/donor')
         .then(response => setDonors(response.data))
         .catch(error => console.error('Failed to fetch donors:', error));
 
-      axios.get('http://localhost:5000/api/patient')
+      axios.get('https://bloodcell-server.onrender.com/api/patient')
         .then(response => setPatients(response.data))
         .catch(error => console.error('Failed to fetch patients:', error));
     }
