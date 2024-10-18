@@ -44,7 +44,7 @@ const LoginForm = ({ onLoginSuccess }) => {
           />
         </fieldset>
         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-        <button type="submit">Login</button>
+        <button className='login-button' type="submit">Login</button>
       </form>
       </div>
     </div>

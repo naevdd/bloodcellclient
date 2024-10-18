@@ -15,7 +15,7 @@ fieldset{
   display: flex;
   flex-direction: column;
   gap: 25px;
-  font-family: urbanist;
+  font-family:roboto;
   font-size: 15px;
 }
 
@@ -46,7 +46,7 @@ legend{
   width:100%;
 }
 
-button{
+.login-button{
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: 500;
@@ -54,6 +54,10 @@ button{
   border: none;
   border-radius: 5px;
   color: white
+}
+
+.login-button:hover{
+  background-color: white;
 }
 
 .submit-button {
