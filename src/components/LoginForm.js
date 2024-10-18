@@ -19,6 +19,8 @@ const LoginForm = ({ onLoginSuccess }) => {
   };
 
   return (
+    <>
+    <h1>WELCOME TO SFI BLOOD CELL</h1>
     <div className='form-container'>
       <h2 className='heading'>Admin Login</h2>
       <div>
@@ -46,6 +48,7 @@ const LoginForm = ({ onLoginSuccess }) => {
       </form>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,11 +1,12 @@
 import React from 'react';
 import './Header.css';
+import reactlogo from '../logobloodcell.png';
 
 const Header = ({ activeSection, onSectionChange }) => {
   return (
     <header className="header">
       <nav className="nav">
-      <img src='../sfi new bold logo (1).png' width="50" height='50' className="logo" alt="logo"></img>
+      <img src={reactlogo}  width='50' height='50' className="logo" alt="logo"></img>
       <div className="divnav">
         <button
           className={`nav-button ${activeSection === 'intro' ? 'active' : ''}`}

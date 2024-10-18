@@ -4,11 +4,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 100px;
   }
-  
-  @font-face {
-    font-family: satoshi;
-    src: url(../Satoshi-Bold.otf);
-  }
 
   .logo{
     position: absolute;

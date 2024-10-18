@@ -35,6 +35,7 @@ function App() {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [donors, setDonors] = useState([]);
   const [patients, setPatients] = useState([]);
+  const [selectedBloodGroup, setSelectedBloodGroup] = useState('');
 
   const handleSectionChange = (section) => {
     setActiveSection(section);
@@ -62,6 +63,14 @@ function App() {
     }
   }, [isAdminLoggedIn]);
 
+  const filteredDonors = donors.filter(donor => 
+    selectedBloodGroup === '' || donor.bloodType === selectedBloodGroup
+  );
+
+  const filteredPatients = patients.filter(patient => 
+    selectedBloodGroup === '' || patient.bloodType === selectedBloodGroup
+  );
+
   return (
     <div className="app">
       <Header activeSection={activeSection} onSectionChange={handleSectionChange} />
@@ -79,9 +88,27 @@ function App() {
 
         {isAdminLoggedIn && (
           <div>
+            <div className="filter-container">
+              <label htmlFor="bloodGroup">Filter by Blood Group: </label>
+              <select
+                id="bloodGroup"
+                value={selectedBloodGroup}
+                onChange={(e) => setSelectedBloodGroup(e.target.value)}
+              >
+                <option value="">All</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </div>
             <DataTable
               title="Donors"
-              data={donors}
+              data={filteredDonors}
               columns={[
                 { label: 'Name', field: 'name' },
                 { label: 'Blood Type', field: 'bloodType' },
@@ -90,7 +117,7 @@ function App() {
             />
             <DataTable
               title="Patients"
-              data={patients}
+              data={filteredPatients}
               columns={[
                 { label: 'Name', field: 'name' },
                 { label: 'Blood Type', field: 'bloodType' },
