@@ -17,7 +17,7 @@ const Form = ({ formType }) => {
     e.preventDefault();
     try {
       const endpoint = formType === 'patient' ? 'patient' : 'donor';
-      const response = await fetch(`http://localhost:5000/api/${endpoint}`, {
+      const response = await fetch(`https://bloodcell-server.onrender.com/api/${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
