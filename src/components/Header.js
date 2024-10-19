@@ -4,9 +4,11 @@ import reactlogo from '../logobloodcell.png';
 
 const Header = ({ activeSection, onSectionChange }) => {
   return (
-    <header className="header">
-      <nav className="nav">
-      <img src={reactlogo}  width='50' height='50' className="logo" alt="logo"></img>
+    <>
+    <nav className="nav">
+      <div className='divlogo'>
+          <img src={reactlogo} alt='logo' class='logo'/>
+      </div>
       <div className="divnav">
         <button
           className={`nav-button ${activeSection === 'intro' ? 'active' : ''}`}
@@ -26,9 +28,9 @@ const Header = ({ activeSection, onSectionChange }) => {
         >
           PATIENT
         </button>
-        </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+    </>
   );
 };
 
