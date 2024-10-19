@@ -80,4 +80,16 @@ legend{
   .form {
     width: 100%;
   }
+  .form-field input{
+    padding:0px;
+  }
+  .form-field select{
+    padding:0px;
+  }
+  .login-button{
+    padding:5px 10px;
+  }
+  .submit-button{
+    padding:5px;
+  }
 }
