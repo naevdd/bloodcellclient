@@ -7,6 +7,8 @@ const Form = ({ formType }) => {
     bloodType: '',
     phone: '',
     units: formType === 'patient' ? '' : null,
+    bystander: formType === 'donor' ? '' : null,
+    bystanderphone: formType === 'donor' ? '' : null,
   });
 
   const handleChange = (e) => {
@@ -87,6 +89,32 @@ const Form = ({ formType }) => {
             required
           />
         </fieldset>
+
+        {formType ==='donor' && (
+          <fieldset className="form-field">
+          <legend>Bystander Name</legend>
+          <input
+            type="text"
+            name="name"
+            value={formData.bystander}
+            onChange={handleChange}
+            required
+          />
+        </fieldset>
+        )}
+
+        {formType === 'donor' && (
+          <fieldset className="form-field">
+          <legend>Bystander Number</legend>
+          <input
+            type="tel"
+            name="phone"
+            value={formData.bystanderphone}
+            onChange={handleChange}
+            required
+          />
+        </fieldset>
+        )}
 
         <button type="submit" className="submit-button">SUBMIT</button>
       </form>
