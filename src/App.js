@@ -114,6 +114,8 @@ function App() {
                 { label: 'Name', field: 'name' },
                 { label: 'Blood Type', field: 'bloodType' },
                 { label: 'Phone Number', field: 'phone' },
+                { label: 'Bystander', field: 'bystander'},
+                { label: 'Bystander Phone', field: 'bystanderphone'}
               ]}
             />
             <DataTable

@@ -90,12 +90,12 @@ const Form = ({ formType }) => {
           />
         </fieldset>
 
-        {formType ==='donor' && (
+        {formType === 'donor' && (
           <fieldset className="form-field">
           <legend>Bystander Name</legend>
           <input
             type="text"
-            name="name"
+            name="bystander"
             value={formData.bystander}
             onChange={handleChange}
             required
@@ -108,7 +108,7 @@ const Form = ({ formType }) => {
           <legend>Bystander Number</legend>
           <input
             type="tel"
-            name="phone"
+            name="bystanderphone"
             value={formData.bystanderphone}
             onChange={handleChange}
             required
