@@ -6,9 +6,12 @@ const Form = ({ formType }) => {
     name: '',
     bloodType: '',
     phone: '',
-    units: formType === 'patient' ? '' : null,
+    noOfBags: formType === 'patient' ? '' : null,
+    hospital: formType === 'patient' ? '' : null,
+    bystanderphone:'',
+    dateRequired: formType === 'patient' ? '' : null,
+    timeRequired: formType === 'patient' ? '' : null,
     bystander: formType === 'donor' ? '' : null,
-    bystanderphone: formType === 'donor' ? '' : null,
   });
 
   const handleChange = (e) => {
@@ -68,11 +71,11 @@ const Form = ({ formType }) => {
 
         {formType === 'patient' && (
           <fieldset className="form-field">
-            <legend>Number of units</legend>
+            <legend>Number of Bags</legend>
             <input
               type="number"
-              name="units"
-              value={formData.units}
+              name="noOfBags"
+              value={formData.noOfBags}
               onChange={handleChange}
               required
             />
@@ -102,9 +105,22 @@ const Form = ({ formType }) => {
           />
         </fieldset>
         )}
-
-        {formType === 'donor' && (
+        
+        {formType === 'patient' && (
           <fieldset className="form-field">
+            <legend>Hospital</legend>
+            <input
+              type="text"
+              name="hospital"
+              value={formData.hospital}
+              onChange={handleChange}
+              required
+            />
+          </fieldset>
+        )}
+        
+
+        <fieldset className="form-field">
           <legend>Bystander Number</legend>
           <input
             type="tel"
@@ -114,6 +130,31 @@ const Form = ({ formType }) => {
             required
           />
         </fieldset>
+
+        {formType === 'patient' && (
+          <fieldset className="form-field">
+            <legend>Date Required</legend>
+            <input
+              type="Date"
+              name="dateRequired"
+              value={formData.dateRequired}
+              onChange={handleChange}
+              required
+            />
+          </fieldset>
+        )}
+        
+        {formType === 'patient' && (
+          <fieldset className="form-field">
+            <legend>Time Required</legend>
+            <input
+              type="Time"
+              name="timeRequired"
+              value={formData.timeRequired}
+              onChange={handleChange}
+              required
+            />
+          </fieldset>
         )}
 
         <button type="submit" className="submit-button">SUBMIT</button>
