@@ -114,8 +114,6 @@ function App() {
                 { label: 'Name', field: 'name' },
                 { label: 'Blood Type', field: 'bloodType' },
                 { label: 'Phone Number', field: 'phone' },
-                { label: 'Bystander', field: 'bystander'},
-                { label: 'Bystander Phone', field: 'bystanderphone'}
               ]}
             />
             <DataTable
@@ -124,8 +122,12 @@ function App() {
               columns={[
                 { label: 'Name', field: 'name' },
                 { label: 'Blood Type', field: 'bloodType' },
-                { label: 'Number of Units', field: 'units' },
+                { label: 'Number of Bags', field: 'units' },
                 { label: 'Phone Number', field: 'phone' },
+                { label: 'Hospital', field: 'hospital' },
+                { label: 'Bystander Number', field: 'bystanderphone' },
+                { label: 'Date Required', field: 'dateRequired' },
+                { label: 'Time Required', field: 'timeRequired' },
               ]}
             />
           </div>

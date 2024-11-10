@@ -8,10 +8,9 @@ const Form = ({ formType }) => {
     phone: '',
     noOfBags: formType === 'patient' ? '' : null,
     hospital: formType === 'patient' ? '' : null,
-    bystanderphone:'',
+    bystanderphone: formType === 'patient' ? '' : null,
     dateRequired: formType === 'patient' ? '' : null,
     timeRequired: formType === 'patient' ? '' : null,
-    bystander: formType === 'donor' ? '' : null,
   });
 
   const handleChange = (e) => {
@@ -92,19 +91,6 @@ const Form = ({ formType }) => {
             required
           />
         </fieldset>
-
-        {formType === 'donor' && (
-          <fieldset className="form-field">
-          <legend>Bystander Name</legend>
-          <input
-            type="text"
-            name="bystander"
-            value={formData.bystander}
-            onChange={handleChange}
-            required
-          />
-        </fieldset>
-        )}
         
         {formType === 'patient' && (
           <fieldset className="form-field">
@@ -118,18 +104,19 @@ const Form = ({ formType }) => {
             />
           </fieldset>
         )}
-        
 
-        <fieldset className="form-field">
-          <legend>Bystander Number</legend>
-          <input
-            type="tel"
-            name="bystanderphone"
-            value={formData.bystanderphone}
-            onChange={handleChange}
-            required
-          />
-        </fieldset>
+        {formType === 'patient' && (
+          <fieldset className="form-field">
+            <legend>Bystander Number</legend>
+            <input
+              type="tel"
+              name="bystanderphone"
+              value={formData.bystanderphone}
+              onChange={handleChange}
+              required
+            />
+          </fieldset>
+        )}
 
         {formType === 'patient' && (
           <fieldset className="form-field">
@@ -148,7 +135,7 @@ const Form = ({ formType }) => {
           <fieldset className="form-field">
             <legend>Time Required</legend>
             <input
-              type="Time"
+              type="text"
               name="timeRequired"
               value={formData.timeRequired}
               onChange={handleChange}
