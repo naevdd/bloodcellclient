@@ -122,7 +122,7 @@ const Form = ({ formType }) => {
           <fieldset className="form-field">
             <legend>Date Required</legend>
             <input
-              type="Date"
+              type="date"
               name="dateRequired"
               value={formData.dateRequired}
               onChange={handleChange}
